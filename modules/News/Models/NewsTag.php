@@ -1,7 +1,7 @@
 <?php
 namespace Modules\News\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class NewsTag extends BaseModel

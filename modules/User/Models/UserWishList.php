@@ -1,6 +1,7 @@
 <?php
 namespace Modules\User\Models;
-use App\BaseModel;
+
+use App\Models\BaseModel;
 
 class UserWishList extends BaseModel
 {

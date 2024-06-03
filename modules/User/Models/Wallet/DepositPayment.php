@@ -1,7 +1,7 @@
 <?php
 namespace Modules\User\Models\Wallet;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Modules\Booking\Models\Payment;
 use Modules\User\Emails\CreditPaymentEmail;

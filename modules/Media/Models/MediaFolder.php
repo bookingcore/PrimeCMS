@@ -2,7 +2,7 @@
 
 namespace Modules\Media\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class MediaFolder extends BaseModel
 {

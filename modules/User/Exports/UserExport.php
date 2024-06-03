@@ -4,7 +4,7 @@ namespace Modules\User\Exports;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithMapping;
-use App\User;
+use App\Models\User;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class UserExport implements FromCollection, WithHeadings, WithMapping

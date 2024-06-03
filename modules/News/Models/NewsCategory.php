@@ -1,10 +1,9 @@
 <?php
 namespace Modules\News\Models;
 
-use App\BaseModel;
-use Kalnoy\Nestedset\NodeTrait;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Modules\Core\Models\SEO;
+use Kalnoy\Nestedset\NodeTrait;
 
 class NewsCategory extends BaseModel
 {

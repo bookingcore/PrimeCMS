@@ -7,7 +7,7 @@
  */
 namespace Modules\User\Controllers;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Modules\FrontendController;
 

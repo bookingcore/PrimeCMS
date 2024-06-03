@@ -26,7 +26,7 @@
                         <form method="get" action="" class="filter-form filter-form-right d-flex justify-content-end" role="search">
                             @if(is_admin())
                                 <?php
-                                $company = \App\User::find(Request()->input('create_user'));
+                                $company = \App\Models\User::find(Request()->input('create_user'));
                                 \App\Helpers\AdminForm::select2('create_user', [
                                     'configs' => [
                                         'ajax'        => [

@@ -3,7 +3,7 @@
 namespace Modules\Popup\Models;
 
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class PopupTranslation extends BaseModel
 {

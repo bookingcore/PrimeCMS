@@ -1,8 +1,8 @@
 <?php
 namespace Modules\User\Models\Wallet;
 
-use App\BaseModel;
-use App\User;
+use App\Models\BaseModel;
+use App\Models\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Booking\Models\Payment;
 

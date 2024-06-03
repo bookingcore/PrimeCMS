@@ -7,7 +7,7 @@
  */
 namespace Modules\News\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class TagTranslation extends BaseModel
 {

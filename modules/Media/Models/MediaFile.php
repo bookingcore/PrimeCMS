@@ -1,14 +1,11 @@
 <?php
 namespace Modules\Media\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Modules\Media\Admin\MediaController;
 use Modules\Media\Helpers\FileHelper;
 
 class MediaFile extends BaseModel

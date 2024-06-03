@@ -4,7 +4,7 @@ namespace Modules\User\Listeners;
 
 use App\Notifications\AdminChannelServices;
 use App\Notifications\PrivateChannelServices;
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Log;
 use Modules\User\Events\NewVendorRegistered;

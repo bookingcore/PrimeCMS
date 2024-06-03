@@ -1,12 +1,10 @@
 <?php
 namespace Modules\Page\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Modules\Core\Models\SEO;
 
 class Page extends BaseModel
 {

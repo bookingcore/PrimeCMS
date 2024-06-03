@@ -2,7 +2,7 @@
 
 namespace Modules\User\Models;
 
-use App\User;
+use App\Models\User;
 use Modules\Booking\Models\Payment;
 
 class PlanPayment extends Payment

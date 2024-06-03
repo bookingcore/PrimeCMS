@@ -1,10 +1,9 @@
 <?php
 namespace Modules\News\Models;
 
-use App\BaseModel;
-use App\User;
+use App\Models\BaseModel;
+use App\Models\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Modules\Core\Models\SEO;
 use Modules\Review\Models\Review;
 
 class News extends BaseModel

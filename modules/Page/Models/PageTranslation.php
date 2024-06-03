@@ -7,7 +7,7 @@
  */
 namespace Modules\Page\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class PageTranslation extends BaseModel
 {

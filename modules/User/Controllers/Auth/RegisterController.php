@@ -81,7 +81,7 @@
                 ], 200);
             } else {
 
-                $user = \App\User::create([
+                $user = \App\Models\User::create([
                     'first_name' => $request->input('first_name'),
                     'last_name'  => $request->input('last_name'),
                     'email'      => $request->input('email'),

@@ -1,9 +1,9 @@
 <?php
 namespace Modules\Core\Models;
 
-use App\BaseModel;
-use Illuminate\Support\Facades\Cache;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Concerns\HasEvents;
+use Illuminate\Support\Facades\Cache;
 use Modules\Language\Models\Language;
 
 class Settings extends BaseModel

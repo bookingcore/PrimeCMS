@@ -7,7 +7,7 @@
  */
 namespace Modules\Core\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class NotificationPush extends BaseModel
 {

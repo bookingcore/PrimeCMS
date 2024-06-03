@@ -4,7 +4,7 @@
 
     use App\Notifications\AdminChannelServices;
     use App\Notifications\PrivateChannelServices;
-    use App\User;
+    use App\Models\User;
     use Modules\User\Events\NewVendorRegistered;
     use Modules\User\Events\RequestCreditPurchase;
     use Modules\User\Events\UpdateCreditPurchase;

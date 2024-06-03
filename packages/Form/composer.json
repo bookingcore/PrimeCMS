@@ -1,0 +1,26 @@
+{
+    "name": "primecms/form",
+    "description": "Form Generator for PrimeCMS",
+    "type": "package",
+    "license": "MIT",
+    "version": "0.1",
+    "autoload": {
+        "psr-4": {
+            "PrimeCMS\\Form\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "dannie",
+            "email": "dannie.haui@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PrimeCMS\\Form\\Providers\\ServiceProvider"
+            ]
+        }
+    }
+}

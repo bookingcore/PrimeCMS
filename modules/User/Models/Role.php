@@ -4,8 +4,7 @@
 namespace Modules\User\Models;
 
 
-
-use App\BaseModel;
+use App\Models\BaseModel;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Modules\User\Helpers\PermissionHelper;
@@ -112,6 +111,6 @@ class Role extends BaseModel
     }
 
     public function users(){
-        return $this->hasMany(\App\User::class,'role_id');
+        return $this->hasMany(\App\Models\User::class, 'role_id');
     }
 }

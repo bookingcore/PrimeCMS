@@ -2,12 +2,9 @@
 
 namespace Modules\Popup\Models;
 
-use App\BaseModel;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\BaseModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Cookie;
-use Modules\Core\Models\SEO;
 
 class Popup extends BaseModel
 {

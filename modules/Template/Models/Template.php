@@ -2,10 +2,9 @@
 
 namespace Modules\Template\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Modules\Template\Blocks\BaseBlock;
 use Modules\Theme\ThemeManager;
-use PhpParser\Node\Expr\Cast\Object_;
 
 class Template extends BaseModel
 {

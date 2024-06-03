@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Core\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Plugins\ServiceProvider;
 
 class Plugins extends BaseModel

@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Core\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 
 class AttributesTranslation extends BaseModel
 {

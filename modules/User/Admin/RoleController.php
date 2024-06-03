@@ -3,7 +3,7 @@
 namespace Modules\User\Admin;
 
 use App\Http\Controllers\AdminController;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

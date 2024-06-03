@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Core\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Illuminate\Support\Facades\Cache;
 
 class Menu extends BaseModel

@@ -1,7 +1,7 @@
 <?php
 namespace Modules\Core\Models;
 
-use App\BaseModel;
+use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
 use Modules\Boat\Models\Boat;

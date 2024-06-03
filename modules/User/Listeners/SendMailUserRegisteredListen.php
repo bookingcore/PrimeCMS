@@ -2,7 +2,7 @@
 
     namespace Modules\User\Listeners;
 
-    use App\User;
+    use App\Models\User;
     use Illuminate\Support\Facades\Mail;
     use Modules\User\Emails\RegisteredEmail;
     use Modules\User\Events\SendMailUserRegistered;

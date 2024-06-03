@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e61a9e00bbb47903e2f49a08bafe4ecb",
+    "content-hash": "22c9bd754379aede340e1a0b9a94551a",
     "packages": [
         {
             "name": "brick/math",
@@ -2466,6 +2466,41 @@
                 }
             ],
             "time": "2023-11-12T21:59:55+00:00"
+        },
+        {
+            "name": "primecms/form",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "./packages/Form",
+                "reference": "b74f276e9a7e7225e83678ddb066639f3c35af40"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PrimeCMS\\Form\\Providers\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PrimeCMS\\Form\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "dannie",
+                    "email": "dannie.haui@gmail.com"
+                }
+            ],
+            "description": "Form Generator for PrimeCMS",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "psr/clock",

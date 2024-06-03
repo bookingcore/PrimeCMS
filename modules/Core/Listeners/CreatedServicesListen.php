@@ -2,7 +2,7 @@
     namespace Modules\Core\Listeners;
     use App\Notifications\AdminChannelServices;
     use App\Notifications\PrivateChannelServices;
-    use App\User;
+    use App\Models\User;
     use Illuminate\Support\Facades\Auth;
     use Modules\Core\Events\CreatedServicesEvent;
 

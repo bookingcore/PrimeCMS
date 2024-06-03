@@ -1,7 +1,7 @@
 <div class="mb-3">
     <label class="d-block" for="exampleInputEmail1">{{ __("Vendor") }}</label>
     @php
-    $user = !empty(Request()->vendor_id) ? App\User::find(Request()->vendor_id) : false;
+    $user = !empty(Request()->vendor_id) ? App\Models\User::find(Request()->vendor_id) : false;
     \App\Helpers\AdminForm::select2('vendor_id', [
         'configs' => [
             'ajax'        => [
