@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Managers\ModuleManager;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,14 +12,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->register(\Core\ServiceProvider::class);
+        $this->loadCoreModules();
     }
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
+    public function loadCoreModules()
     {
-        //
+        foreach (ModuleManager::getModules() as $module) {
+            $this->app->register($module);
+        }
     }
 }

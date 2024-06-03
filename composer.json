@@ -23,13 +23,9 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Core\\": "core/",
             "Modules\\": "modules/",
             "Themes\\": "themes/"
         },
-        "files": [
-            "core/CoreHelpers.php"
-        ]
     },
     "autoload-dev": {
         "psr-4": {
