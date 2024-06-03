@@ -9,7 +9,6 @@ use Modules\Page\Hook;
 use Modules\Page\Models\Page;
 use Modules\Page\Models\PageTranslation;
 use Modules\Template\Models\Template;
-use function Couchbase\defaultDecoder;
 
 class PageController extends AdminController
 {

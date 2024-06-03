@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use \Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
+
 Route::group(['prefix'=>'user','middleware' => ['auth','verified']],function(){
     Route::match(['get'],'/dashboard','UserController@dashboard')->name("vendor.dashboard");
     Route::post('/reloadChart','UserController@reloadChart');
@@ -26,29 +26,15 @@ Route::group(['prefix'=>'user','middleware' => ['auth','verified']],function(){
         Route::post('/verify-phone','VerificationController@verifyPhone')->name("user.verification.phone.field");
     });
 
-    Route::group(['prefix'=>'/booking'],function(){
-        Route::get('{code}/invoice','BookingController@bookingInvoice')->name('user.booking.invoice');
-    });
-
     Route::match(['get'],'/upgrade-vendor','UserController@upgradeVendor')->name("user.upgrade_vendor");
 
     Route::get('wallet','WalletController@wallet')->name('user.wallet');
     Route::get('wallet/buy','WalletController@buy')->name('user.wallet.buy');
     Route::post('wallet/buyProcess','WalletController@buyProcess')->name('user.wallet.buyProcess');
 
-    Route::get('chat','ChatController@index')->name('user.chat');
-
     Route::group(['prefix'=>'/2fa'],function(){
         Route::get('/','TwoFactorController@index')->name('user.2fa');
     });
-});
-
-Route::group(['prefix'=>config('chatify.routes.prefix'),'middleware'=>'auth'],function(){
-    Route::get('/{id?}', 'MessagesController@iframe')->name(config('chatify.path'));
-    Route::get('search','MessagesController@search')->name('search');
-    Route::get('getContacts', 'MessagesController@getContacts')->name('contacts.get');
-    Route::post('idInfo', 'MessagesController@idFetchData');
-    Route::post('sendMessage', 'MessageController@send')->name('send.message');
 });
 
 
@@ -60,7 +46,6 @@ Route::group(['prefix'=>'profile'],function(){
 
 //Newsletter
 Route::post('newsletter/subscribe','UserController@subscribe')->name('newsletter.subscribe');
-
 
 //Custom User  Register
 
