@@ -21,6 +21,7 @@ class ModuleManager
             'page'     => \Modules\Page\ModuleProvider::class,
             'template' => \Modules\Template\ModuleProvider::class,
             'user'     => \Modules\User\ModuleProvider::class,
+            'theme' => \Modules\Theme\ModuleProvider::class,
         ];
     }
 }
