@@ -3,6 +3,7 @@
 namespace PrimeCMS\Form\Fields;
 
 use PrimeCMS\Form\BaseForm;
+use PrimeCMS\Form\Enums\PositionEnum;
 use PrimeCMS\Form\Helpers\RulesParser;
 use PrimeCMS\Form\Traits\HtmlRenderable;
 
@@ -26,7 +27,8 @@ abstract class BaseField
     public function getValue()
     {
         $std = $this->getOption('std');
-        $value = $this->getOption('value') !== null ?: $std;
+        $valueOption = $this->getOption('value');
+        $value = $valueOption !== null ? $valueOption : $std;
 
         if ($value === null) {
             // Try from model
@@ -36,7 +38,9 @@ abstract class BaseField
             }
         }
 
-        return $value;
+
+        // TODO add a way to disable use of "old" method
+        return old($this->name, $value);
 
     }
 
@@ -73,5 +77,25 @@ abstract class BaseField
     public function getRules()
     {
         return $this->getOption('rules', []);
+    }
+
+    public function getId()
+    {
+        return $this->getOption('id', $this->name);
+    }
+
+    public function isMultiple()
+    {
+        return $this->getOption('multiple');
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getPosition(): PositionEnum
+    {
+        return $this->getOption('position');
     }
 }

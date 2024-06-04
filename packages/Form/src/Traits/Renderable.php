@@ -2,8 +2,10 @@
 
 namespace PrimeCMS\Form\Traits;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\HtmlString;
 use PrimeCMS\Form\Enums\PositionEnum;
+use PrimeCMS\Form\Fields\BaseField;
 
 trait Renderable
 {
@@ -21,12 +23,13 @@ trait Renderable
 
     }
 
-    public function renderField($field)
+    public function renderField(BaseField $field)
     {
-        $field = $this->getField($field);
-        if ($field) {
-            return $field->render();
+        $res = $field->render();
+        if ($res instanceof View) {
+            return $res->render();
         }
+        return $res;
     }
 
     public function render()
@@ -37,5 +40,9 @@ trait Renderable
         ])->render());
     }
 
+    public function __toString(): string
+    {
+        return $this->render();
+    }
 
 }

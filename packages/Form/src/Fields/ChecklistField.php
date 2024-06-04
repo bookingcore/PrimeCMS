@@ -2,7 +2,7 @@
 
 namespace PrimeCMS\Form\Fields;
 
-class TextField extends BaseField
+class ChecklistField extends BaseField
 {
 
     public function render()
@@ -11,11 +11,12 @@ class TextField extends BaseField
             'name'        => $this->name,
             'value'       => $this->getValue(),
             'label'       => $this->getOption("label"),
-            'inputType'   => $this->getOption("inputType", "text"),
             'placeholder' => $this->getOption("placeholder"),
-            'attrs'       => $this->attributesHtml($this->getAttrs())
+            'attrs'       => $this->attributesHtml($this->getAttrs()),
+            'options'     => $this->getOption("options", []),
+            "id"          => $this->getId()
         ];
-        return view('primecms/form::fields.text', $data);
+        return view('primecms/form::fields.checklist', $data);
     }
 
 }

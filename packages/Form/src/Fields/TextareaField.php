@@ -2,7 +2,7 @@
 
 namespace PrimeCMS\Form\Fields;
 
-class TextField extends BaseField
+class TextareaField extends BaseField
 {
 
     public function render()
@@ -11,11 +11,10 @@ class TextField extends BaseField
             'name'        => $this->name,
             'value'       => $this->getValue(),
             'label'       => $this->getOption("label"),
-            'inputType'   => $this->getOption("inputType", "text"),
             'placeholder' => $this->getOption("placeholder"),
             'attrs'       => $this->attributesHtml($this->getAttrs())
         ];
-        return view('primecms/form::fields.text', $data);
+        return view('primecms/form::fields.textarea', $data);
     }
 
 }

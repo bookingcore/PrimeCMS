@@ -2,6 +2,7 @@
 
 namespace PrimeCMS\Form;
 
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use PrimeCMS\Form\Enums\PositionEnum;
@@ -10,12 +11,15 @@ use PrimeCMS\Form\Traits\HasModel;
 use PrimeCMS\Form\Traits\HasValidation;
 use PrimeCMS\Form\Traits\Renderable;
 
-class BaseForm
+class BaseForm implements Htmlable
 {
     use HasValidation;
     use Renderable;
     use HasModel;
 
+    /**
+     * @var Collection BaseField
+     */
     protected Collection $schema;
 
     protected Model $model;
@@ -40,11 +44,14 @@ class BaseForm
             "priority" => 10
         ];
 
-        $this->schema->add([
+        $fieldData = [
             "name"    => $name,
             "type"    => $type,
             "options" => array_merge($default, $options)
-        ]);
+        ];
+
+        $this->schema->add($this->getField($fieldData));
+
         return $this;
     }
 
@@ -57,7 +64,7 @@ class BaseForm
     public function remove($name)
     {
         $this->schema = $this->schema->reject(function ($item) use ($name) {
-            return $item['name'] === $name;
+            return $item->getName() === $name;
         });
         return $this;
     }
@@ -81,7 +88,7 @@ class BaseForm
     protected function getFieldsIn(PositionEnum $enum)
     {
         return $this->schema->where(function ($item) use ($enum) {
-            return $item['options']['position'] === $enum;
+            return $item->getPosition() === $enum;
         })->all();
     }
 
@@ -102,6 +109,11 @@ class BaseForm
             "field" => $field,
             "form"  => $this
         ]);
+    }
+
+    public function toHtml()
+    {
+        return $this->render();
     }
 
 }

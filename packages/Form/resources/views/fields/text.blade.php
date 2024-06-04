@@ -1,4 +1,5 @@
 <div class="mb-3">
-    <label class="form-label">{{$label}}</label>
-    <input type="{{$inputType}}" class="form-control" name="{{$name}}" placeholder="{{$placeholder}}" {{$attrs}}>
+    @include("primecms/form::label")
+    <input type="{{$inputType}}" value="{{$value}}" class="form-control" name="{{$name}}" placeholder="{{$placeholder}}" {{$attrs}}>
+    @include("primecms/form::error")
 </div>
